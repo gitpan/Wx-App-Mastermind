@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use base qw(Wx::Perl::Thread::ClassPublisher Wx::App::Mastermind::Player);
 
-use Games::Mastermind::Solver;
+use Games::Mastermind::Solver::BruteForce;
 
 sub new {
     my( $class, @args ) = @_;
@@ -69,7 +69,7 @@ __PACKAGE__->mk_ro_accessors( qw(solver handler) );
 sub new {
     my( $class, $game, $handler ) = @_;
     my $self = $class->SUPER::new
-      ( { solver  => Games::Mastermind::Solver->new( $game ),
+      ( { solver  => Games::Mastermind::Solver::BruteForce->new( $game ),
           handler => $handler } );
 
     return $self;

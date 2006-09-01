@@ -16,7 +16,7 @@ use strict;
 use warnings;
 use base qw(Wx::Frame Class::Accessor::Fast);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Wx qw(:sizer);
 use Wx::Event qw(EVT_MENU EVT_CLOSE);
